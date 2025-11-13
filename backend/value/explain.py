@@ -1,5 +1,5 @@
 """
-Explainable AI – Tippmester 5.2
+Explainable AI – Tippmester AI Fusion 1.0
 Magyarázza a Tippmester AI döntéseit emberi nyelven.
 """
 
@@ -16,3 +16,4 @@ class ExplainableAI:
     def explain(self, pick, odds, value_score):
         template = random.choice(self.templates)
         return template.format(pick=pick, odds=odds, value_score=value_score)
+
