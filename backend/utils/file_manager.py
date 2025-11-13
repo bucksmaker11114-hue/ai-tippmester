@@ -1,5 +1,5 @@
 """
-File Manager – Tippmester 5.2
+File Manager – Tippmester AI Fusion 1.0
 Adat- és riportfájlok karbantartása.
 """
 
@@ -22,3 +22,4 @@ class FileManager:
             path = os.path.join(self.base_path, f)
             if not os.path.exists(path):
                 open(path, "w").close()
+
