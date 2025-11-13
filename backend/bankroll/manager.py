@@ -1,5 +1,5 @@
 """
-Bankroll Manager – Tippmester 5.2
+Bankroll Manager – Tippmester AI Fusion 1.0
 Többprofilos bankroll kezelő, kockázat-alapú elosztással.
 """
 
@@ -40,3 +40,4 @@ class BankrollManager:
             writer = csv.DictWriter(f, fieldnames=self.history[0].keys())
             writer.writeheader()
             writer.writerows(self.history)
+
