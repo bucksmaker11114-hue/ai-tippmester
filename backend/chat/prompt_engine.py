@@ -1,5 +1,5 @@
 """
-Prompt Engine – Tippmester 5.2
+Prompt Engine – Tippmester AI Fusion 1.0
 Humoros, véletlenszerű magyar válaszok generálása Mesterkéhez.
 """
 
@@ -24,3 +24,4 @@ class PromptEngine:
         if not options:
             return "Nem tudom, mit mondjak, de biztos, hogy Mesterke figyel!"
         return random.choice(options)
+
