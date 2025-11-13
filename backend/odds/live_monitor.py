@@ -1,5 +1,5 @@
 """
-Live Odds Monitor – Tippmester 5.2
+Live Odds Monitor – Tippmester AI Fusion 1.0
 Valós idejű odds esés figyelő modul.
 """
 
@@ -20,3 +20,4 @@ class LiveOddsMonitor:
                 alerts[key] = diff
         self.previous_odds[match] = current_odds
         return alerts
+
