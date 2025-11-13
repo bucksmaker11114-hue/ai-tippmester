@@ -1,5 +1,5 @@
 """
-Scheduler – Tippmester 5.2
+Scheduler – Tippmester AI Fusion 1.0
 Időzített riport és tanulási futások.
 """
 
@@ -17,3 +17,4 @@ class Scheduler:
         while True:
             schedule.run_pending()
             time.sleep(60)
+
