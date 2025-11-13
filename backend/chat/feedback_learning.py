@@ -1,5 +1,5 @@
 """
-Feedback Learner – Tippmester 5.2
+Feedback Learner – Tippmester AI Fusion 1.0
 Tanul a felhasználó viselkedéséből (pozitív / negatív visszajelzések).
 """
 
@@ -20,3 +20,4 @@ class FeedbackLearner:
     def _save(self):
         with open(self.path, "w", encoding="utf-8") as f:
             json.dump(self.stats, f, indent=2, ensure_ascii=False)
+
