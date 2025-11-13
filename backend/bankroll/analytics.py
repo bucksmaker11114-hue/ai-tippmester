@@ -1,5 +1,5 @@
 """
-Bankroll Analytics – Tippmester 5.2
+Bankroll Analytics – Tippmester AI Fusion 1.0
 ROI és statisztikai kimutatások.
 """
 
@@ -17,3 +17,4 @@ class BankrollAnalytics:
             return round(((end_balance - start_balance) / start_balance) * 100, 2)
         except Exception:
             return 0.0
+
