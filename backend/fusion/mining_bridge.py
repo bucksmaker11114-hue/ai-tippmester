@@ -1,5 +1,5 @@
 """
-Mining Bridge – Tippmester – DataMining 2.1
+Mining Bridge – Tippmester AI Fusion 1.0 – DataMining 2.1
 Ez a modul biztosítja a kétirányú adatkapcsolatot:
 1️⃣ Tippmester → Data Mining: odds, tippek, eredmények küldése
 2️⃣ Data Mining → Tippmester: prediktív javaslatok, visszatanulás
