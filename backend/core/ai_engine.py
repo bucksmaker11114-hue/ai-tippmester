@@ -1,5 +1,5 @@
 """
-Tippmester AI 5.2 - AI Engine
+Tippmester AI Fusion 1.0 - AI Engine
 Fő döntésmotor: odds, statisztika és tanulási rétegek kombinációja.
 """
 
@@ -49,3 +49,4 @@ class TippmesterAI:
 
     def get_history(self):
         return self.history
+
