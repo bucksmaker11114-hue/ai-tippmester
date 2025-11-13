@@ -1,5 +1,5 @@
 """
-Chat Memory – Tippmester 5.2
+Chat Memory – Tippmester AI Fusion 1.0
 Egyszerű memória az előző üzenetekhez (kontextus tanulás).
 """
 
@@ -21,3 +21,4 @@ class ChatMemory:
     def _save(self):
         with open(self.filepath, "w", encoding="utf-8") as f:
             json.dump(self.messages, f, indent=2, ensure_ascii=False)
+
