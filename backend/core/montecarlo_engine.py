@@ -1,5 +1,5 @@
 """
-MonteCarlo Engine – Tippmester 3.0
+MonteCarlo Engine – Tippmester AI Fusion 1.0
 Monte Carlo alapú value odds szimuláció és predikció.
 Használat: a ValueAnalyzer hívja meg párhuzamos szálban.
 """
