@@ -1,5 +1,5 @@
 """
-Event Fusion – Tippmester 5.2
+Event Fusion – Tippmester AI Fusion 1.0
 Sport + piaci adatok integrálása.
 """
 
@@ -23,3 +23,4 @@ class EventFusion:
         """Piaci elmozdulás előrejelzése."""
         drift = round((sentiment - 0.5) * liquidity, 3)
         return {"predicted_shift": drift}
+
