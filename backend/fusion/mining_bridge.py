@@ -81,3 +81,16 @@ class DataMiningBridge:
             "payload": error
         }])
         df.to_csv(self.log_path, mode="a", header=False, index=False)
+            # 5️⃣ Több meccsre kiterjedő lekérdezés (batch)
+    def get_advice_batch(self, matches):
+        """
+        Több mérkőzésre kér le Data Mining predikciót.
+        """
+        results = {}
+        for m in matches:
+            res = self.get_advice(m)
+            if res:
+                results[m] = res
+        return results
+
+
