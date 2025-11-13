@@ -1,0 +1,21 @@
+{
+  "build": {
+    "builder": "NIXPACKS",
+    "nixpacksPlan": {
+      "phases": {
+        "install": {
+          "cmds": ["pip install -r requirements.txt"]
+        }
+      }
+    }
+  },
+  "deploy": {
+    "startCommand": "uvicorn backend.main:app --host 0.0.0.0 --port $PORT",
+    "healthcheckPath": "/health",
+    "restartPolicyType": "ON_FAILURE"
+  },
+  "variables": {
+    "PYTHON_VERSION": "3.11",
+    "PORT": "8000"
+  }
+}
