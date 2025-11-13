@@ -1,5 +1,5 @@
 """
-Auto Reporter – Tippmester 5.2
+Auto Reporter – Tippmester AI Fusion 1.0
 Automatikus napi riport generálás és e-mail küldés.
 """
 
@@ -27,3 +27,4 @@ Ez a Tippmester AI 5.2 automatikus napi riportja:
 Mesterke 🤖"""
         self.mailer.send_email(subject, body)
         return report
+
