@@ -1,5 +1,5 @@
 """
-Vision Validator – Tippmester 5.2
+Vision Validator – Tippmester AI Fusion 1.0
 A felismerett eseményeket validálja a Fusion Connectorral.
 """
 
@@ -17,3 +17,4 @@ class VisionValidator:
         match_name = f"{teams[0]} vs {teams[1]}"
         pick = "1"  # egyszerűsített választás
         return self.fusion.validate_tip(match_name, pick, odds)
+
