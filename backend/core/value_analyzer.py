@@ -1,5 +1,5 @@
 """
-Tippmester – Value Analyzer 3.0
+Tippmester AI Fusion 1.0 – Value Analyzer 3.0
 Két szálas (dual-stream) predikciós rendszer:
 1️⃣ Saját Monte Carlo és ML predikció
 2️⃣ AI Data Mining javaslatok beolvasása és kombinálása
