@@ -1,5 +1,5 @@
 """
-Performance Log – Tippmester 5.2
+Performance Log – Tippmester AI Fusion 1.0
 AI tippek teljesítményének rögzítése.
 """
 
@@ -23,3 +23,4 @@ class PerformanceLog:
     def _save(self):
         with open(self.path, "w", encoding="utf-8") as f:
             json.dump(self.entries, f, indent=2, ensure_ascii=False)
+
