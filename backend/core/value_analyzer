@@ -1,0 +1,96 @@
+"""
+Value Analyzer – Hybrid AI Tippmester
+Fejlett value odds értékelés két szálra: solo (önálló) és ensemble (AI Data Mining integrált).
+"""
+
+import math
+import random
+from statistics import mean
+
+class ValueAnalyzer:
+    def __init__(self, mode="solo", data_mining_source=None):
+        """
+        mode: "solo" vagy "ensemble"
+        data_mining_source: opcionális AI Data Mining predikciók (dict vagy API callback)
+        """
+        self.mode = mode
+        self.data_mining_source = data_mining_source
+
+    # -------------------------------------------------------
+    # 1️⃣ Monte Carlo alapú valószínűség becslés
+    # -------------------------------------------------------
+    def monte_carlo_simulation(self, odds, trials=50000):
+        if not odds:
+            return 0.5
+
+        win_prob = 0
+        try:
+            expected_outcome = 1 / mean(odds.values())
+            for _ in range(trials):
+                sim = random.random()
+                if sim < expected_outcome:
+                    win_prob += 1
+            return round(win_prob / trials, 4)
+        except Exception:
+            return 0.5
+
+    # -------------------------------------------------------
+    # 2️⃣ Bias korrekció (pl. hazai előny, piac torzítás)
+    # -------------------------------------------------------
+    def bias_adjustment(self, probability, context=None):
+        bias_factor = 0.02
+        if context and context.get("home_advantage"):
+            bias_factor += 0.03
+        adjusted = probability * (1 + random.uniform(-bias_factor, bias_factor))
+        return round(max(min(adjusted, 0.99), 0.01), 4)
+
+    # -------------------------------------------------------
+    # 3️⃣ Expected Value számítás
+    # -------------------------------------------------------
+    def expected_value(self, prob, odds):
+        try:
+            avg_odds = mean(odds.values())
+            ev = (prob * avg_odds) - 1
+            return round(ev, 4)
+        except Exception:
+            return 0.0
+
+    # -------------------------------------------------------
+    # 4️⃣ Ensemble fúzió – ha AI Data Mining is ad predikciót
+    # -------------------------------------------------------
+    def ensemble_fusion(self, local_value, mining_value):
+        fusion = (0.7 * local_value) + (0.3 * mining_value)
+        return round(fusion, 4)
+
+    # -------------------------------------------------------
+    # 5️⃣ Fő metódus – evaluate_odds()
+    # -------------------------------------------------------
+    def evaluate_odds(self, odds, stats=None, context=None):
+        """
+        odds: dict, pl. {"home": 1.8, "draw": 3.2, "away": 4.5}
+        stats/context: opcionális statisztikai input
+        return: 0–1 közötti value score
+        """
+        # Monte Carlo szimuláció
+        mc_prob = self.monte_carlo_simulation(odds)
+        # Bias korrekció
+        adj_prob = self.bias_adjustment(mc_prob, context)
+        # EV számítás
+        ev = self.expected_value(adj_prob, odds)
+
+        # Alapszintű score (solo mód)
+        solo_score = round(max(min(ev + 0.5, 1.0), 0.0), 3)
+
+        if self.mode == "solo":
+            return solo_score
+
+        # Ensemble mód – AI Data Mining integráció
+        if self.mode == "ensemble" and self.data_mining_source:
+            try:
+                mining_value = self.data_mining_source.get("value_score", 0.5)
+                fused = self.ensemble_fusion(solo_score, mining_value)
+                return fused
+            except Exception:
+                return solo_score
+
+        return solo_score
