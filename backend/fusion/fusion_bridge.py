@@ -1,5 +1,5 @@
 """
-Fusion Bridge – Tippmester 5.2
+Fusion Bridge – Tippmester AI Fusion 1.0
 Kapcsolat a Tippmester és a Data Mining 2.0 API között.
 """
 
@@ -17,3 +17,4 @@ class FusionBridge:
             return r.json()
         except Exception as e:
             return {"status": "error", "detail": str(e)}
+
