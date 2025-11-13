@@ -1,5 +1,5 @@
 """
-Vision Context Builder – Tippmester 5.2
+Vision Context Builder – Tippmester AI Fusion 1.0
 Szöveg értelmezése OCR után.
 """
 
@@ -20,3 +20,4 @@ class VisionContextBuilder:
                 if len(parts) >= 2:
                     context["teams"] = [p.strip() for p in parts[:2]]
         return context
+
