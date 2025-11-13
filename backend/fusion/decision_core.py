@@ -1,5 +1,5 @@
 """
-Decision Core – Tippmester 5.2
+Decision Core – Tippmester AI Fusion 1.0
 Sportág-prioritás és döntési súlyozás.
 """
 
@@ -17,3 +17,4 @@ class DecisionCore:
 
     def get_top_sport(self):
         return max(self.weights, key=self.weights.get)
+
