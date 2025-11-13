@@ -1,5 +1,5 @@
 """
-Value Tracker – Tippmester 5.2
+Value Tracker – Tippmester AI Fusion 1.0
 Value anomáliák naplózása és napi összegzés.
 """
 
@@ -26,3 +26,4 @@ class ValueTracker:
             writer = csv.DictWriter(f, fieldnames=self.values[0].keys())
             writer.writeheader()
             writer.writerows(self.values)
+
