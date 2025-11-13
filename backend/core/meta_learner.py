@@ -1,5 +1,5 @@
 """
-Meta Learner - Tippmester AI 5.2
+Meta Learner - Tippmester AI Fusion 1.0
 Öntanuló modul: figyeli a múltbeli teljesítményt, és súlyozza az új tippeket.
 """
 
@@ -22,3 +22,4 @@ class MetaLearner:
     def export_log(self, filepath="backend/data/meta_log.json"):
         with open(filepath, "w", encoding="utf-8") as f:
             json.dump(self.performance_log, f, indent=2, ensure_ascii=False)
+
