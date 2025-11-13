@@ -1,5 +1,5 @@
 """
-Report Summary – Tippmester 5.2
+Report Summary – Tippmester AI Fusion 1.0
 Napi teljesítmény összesítő riport generálása.
 """
 
@@ -21,3 +21,4 @@ class ReportSummary:
             }
         except Exception:
             return {"total_tips": 0, "win_rate": 0, "avg_confidence": 0}
+
