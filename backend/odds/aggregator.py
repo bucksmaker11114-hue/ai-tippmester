@@ -1,5 +1,5 @@
 """
-Odds Aggregator – Tippmester 5.2
+Odds Aggregator – Tippmester AI Fusion 1.0
 Összegyűjti a TippmixPro és nemzetközi API oddsokat.
 """
 
@@ -34,3 +34,4 @@ class OddsAggregator:
             for k, v in src.items():
                 merged[k] += v
         return {k: round(v / count, 2) for k, v in merged.items()}
+
