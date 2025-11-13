@@ -1,5 +1,5 @@
 """
-Vision Handler – Tippmester 5.2
+Vision Handler – Tippmester AI Fusion 1.0
 Kép alapú meccs felismerés (OCR + AI interpretáció).
 """
 
@@ -22,3 +22,4 @@ class VisionHandler:
             return {"status": "ok", "context": context}
         except Exception as e:
             return {"status": "error", "detail": str(e)}
+
