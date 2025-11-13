@@ -1,5 +1,5 @@
 """
-Self Audit – Tippmester 5.2
+Self Audit – Tippmester AI Fusion 1.0
 Napi AI teljesítmény önellenőrzés.
 """
 
@@ -20,3 +20,4 @@ class SelfAudit:
             writer = csv.DictWriter(f, fieldnames=self.entries[0].keys())
             writer.writeheader()
             writer.writerows(self.entries)
+
