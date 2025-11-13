@@ -1,5 +1,5 @@
 """
-Report Generator – Tippmester 5.2
+Report Generator – Tippmester AI Fusion 1.0
 Napi jelentések és statisztikai összefoglalók generálása.
 """
 
@@ -20,3 +20,4 @@ class ReportGenerator:
                 writer.writeheader()
             writer.writerow(data)
         return data
+
