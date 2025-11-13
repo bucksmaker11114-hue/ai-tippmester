@@ -1,5 +1,5 @@
 """
-Report Mailer – Tippmester 5.2
+Report Mailer – Tippmester AI Fusion 1.0
 Napi e-mail küldés Gmail SMTP-n keresztül.
 """
 
@@ -25,3 +25,4 @@ class ReportMailer:
             print("✅ Riport e-mail sikeresen elküldve.")
         except Exception as e:
             print(f"⚠️ E-mail küldési hiba: {e}")
+
