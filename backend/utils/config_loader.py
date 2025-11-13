@@ -1,5 +1,5 @@
 """
-Config Loader – Tippmester 6.0
+Config Loader – Tippmester AI Fusion 1.0
 .env és config beállítások betöltése Railway és lokális környezetben.
 """
 
