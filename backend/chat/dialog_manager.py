@@ -1,5 +1,5 @@
 """
-Tippmester 5.2 – Dialog Manager
+Tippmester AI Fusion 1.0 – Dialog Manager
 Kétirányú chat kezelése: felhasználó ↔ Mesterke.
 """
 
@@ -30,3 +30,4 @@ class DialogManager:
             "response": response,
             "humor_level": humor_level
         }
+
