@@ -1,5 +1,5 @@
 """
-Smart Hedge Manager – Tippmester 5.2
+Smart Hedge Manager – Tippmester AI Fusion 1.0
 Valós idejű fedező tipp javaslat odds mozgások alapján.
 """
 
@@ -18,3 +18,4 @@ class HedgeManager:
                 self.hedge_log.append((outcome, hedge, diff))
                 return {"hedge_tip": hedge, "odds_change": diff}
         return None
+
