@@ -1,5 +1,5 @@
 """
-Logger – Tippmester 6.0
+Logger – Tippmester AI Fusion 1.0
 Színes naplózás a futás közbeni eseményekhez.
 """
 
@@ -24,4 +24,5 @@ class Logger:
     def success(self, msg): self.log("SUCCESS", msg)
     def warning(self, msg): self.log("WARNING", msg)
     def error(self, msg): self.log("ERROR", msg)
+
 
