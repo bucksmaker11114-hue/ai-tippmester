@@ -1,5 +1,5 @@
 """
-Value Calculator – Tippmester 5.2
+Value Calculator – Tippmester AI Fusion 1.0
 Matematikai értékelés odds + stat alapján.
 """
 
@@ -16,3 +16,4 @@ class ValueCalculator:
         if not picks:
             return 0.0
         return round(sum(p["value_score"] for p in picks) / len(picks), 3)
+
